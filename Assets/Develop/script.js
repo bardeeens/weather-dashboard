@@ -1,5 +1,6 @@
 $( document ).ready(function() {
     let todayinit = moment().format('MMMM Do, YYYY')
+    
     $("#city").html(todayinit)
     $("#searchcity").on("click", getWeather)
     $(document).on("keypress", function(event){
@@ -16,6 +17,7 @@ $( document ).ready(function() {
 });
 
 function getWeather(){
+    
     console.log("working");
     let city =  $("#form1").val()
     var queryURL = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=70482e2b61f2d16121b8a6db0d8a674c"
@@ -24,7 +26,28 @@ function getWeather(){
         method: "GET"
       }).then(function(response) {
         console.log(response);
+        let previouscities = []
+        previouscities.push(city);
+                
+                console.log(previouscities);
 
+        for (let i = 0; i < previouscities.length; i++) {
+            let previouscity  = previouscities[i];
+
+            let div = $("<div>");
+            div.html(previouscity);
+            div.attr("class", "bg-dark card text-center m-2")
+            $("#cities-list").append(div)
+           
+              
+            
+        }
+
+        
+    //     let oldcity = $("<div>").attr("class", "old-city card bg-dark")
+    // oldcity.text(city)
+    // $("#city-parent").append.oldcity
+// this is what keeps your old searched cities on their own card
         
         let lon = response.city.coord.lon
         let lat = response.city.coord.lat
@@ -48,7 +71,13 @@ function getWeather(){
 
              $("#uvraysbaby").html(uvIndex)
       
-       
+             storeCities();
+    console.log(localStorage);
+    
+    function storeCities() {
+        // Stringify and set key in localStorage to todos array
+        localStorage.setItem("cities", JSON.stringify(previouscities));
+      }
             
        
         });
@@ -56,7 +85,6 @@ function getWeather(){
     
     });
          
-    
     
     
     
