@@ -108,7 +108,7 @@ $(document).ready(function () {
             $('#city').html(`City of ${response.city.name}<br>${today}`); //need to add date
             $("#weather-today").html(`Temp: ${temp}F°<br>Humidity: ${humidity}%<br>Wind Speed: ${windSpeed}mph<br>UV Index: <button id="uvraysbaby" class="m-1 uv-button"></button>`);
 
-            let coordURL = `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=70482e2b61f2d16121b8a6db0d8a674c`
+            let coordURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=70482e2b61f2d16121b8a6db0d8a674c`
             $.ajax({
                 url: coordURL,
                 method: "GET"
@@ -159,13 +159,13 @@ $(document).ready(function () {
 
 
         });
-        function getStorage() {
-            let storedcities = JSON.parse(localStorage.getItem("cities"));
-            if (storedcities !== null) {
-                previouscities = storedcities;
-            }
+        // function getStorage() {
+        //     let storedcities = JSON.parse(localStorage.getItem("cities"));
+        //     if (storedcities !== null) {
+        //         previouscities = storedcities;
+        //     }
 
-        }
+        // }
 
 
 
