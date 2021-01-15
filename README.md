@@ -2,7 +2,8 @@
 
 This is a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
-
+## Deployed Here
+https://bardeeens.github.io/weather-dashboard/
 ## How it works
 
 ```
@@ -10,9 +11,8 @@ Users can see the weather outlook for multiple cities
 so that they can plan their trips accordingly
 ```
 
-## Acceptance Criteria
+## Details
 
-```
 
 The user searches for a city
 then is presented with current and future conditions for that city and that city is added to the search history
@@ -26,10 +26,18 @@ When they click on a city in the search history
 They are again presented with current and future conditions for that city
 When they open the weather dashboard
 They are presented with the last searched city forecast
-```
+
+
+## Technology Used:
+javaScript
+CSS
+BootStrap
+OpenWeather: https://openweathermap.org/api
+
+
 
 The following image demonstrates the application functionality:
 
-![weather dashboard demo](Assets/Develop/Images/page-preview.png)
+![weather dashboard demo](Assets/Images/page-preview.png)
 
 
