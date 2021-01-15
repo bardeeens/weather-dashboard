@@ -5,3 +5,8 @@ body {
 
 }
 
+.uv-button {
+    border-radius: 15px;
+    font-weight: bolder;
+    color: white;
+}
