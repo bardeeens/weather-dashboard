@@ -95,11 +95,11 @@ $(document).ready(function () {
             $("#temp3").html(`Temp<br>${temp3}<br>Humidity<br>${humidity3}%`);
             $("#temp4").html(`Temp<br>${temp4}<br>Humidity<br>${humidity4}%`);
             $("#temp5").html(`Temp<br>${temp5}<br>Humidity<br>${humidity5}%`);
-            $("#icon1").attr("src", `http://openweathermap.org/img/wn/${response.list[8].weather[0].icon}@2x.png`)
-            $("#icon2").attr("src", `http://openweathermap.org/img/wn/${response.list[16].weather[0].icon}@2x.png`)
-            $("#icon3").attr("src", `http://openweathermap.org/img/wn/${response.list[24].weather[0].icon}@2x.png`)
-            $("#icon4").attr("src", `http://openweathermap.org/img/wn/${response.list[32].weather[0].icon}@2x.png`)
-            $("#icon5").attr("src", `http://openweathermap.org/img/wn/${response.list[39].weather[0].icon}@2x.png`)
+            $("#icon1").attr("src", `https://openweathermap.org/img/wn/${response.list[8].weather[0].icon}@2x.png`)
+            $("#icon2").attr("src", `https://openweathermap.org/img/wn/${response.list[16].weather[0].icon}@2x.png`)
+            $("#icon3").attr("src", `https://openweathermap.org/img/wn/${response.list[24].weather[0].icon}@2x.png`)
+            $("#icon4").attr("src", `https://openweathermap.org/img/wn/${response.list[32].weather[0].icon}@2x.png`)
+            $("#icon5").attr("src", `https://openweathermap.org/img/wn/${response.list[39].weather[0].icon}@2x.png`)
             console.log(response.list[0].weather[0].icon);
             let windSpeed = response.list[0].wind.speed.toFixed(1);
             let today = moment().format('MMMM Do, YYYY')
